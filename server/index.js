@@ -7,7 +7,7 @@ const deviceRoutes = require('./routes/devices');
 const networkRoutes = require('./routes/networks');
 
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 const GNEWS_API_KEY = process.env.GNEWS_API_KEY;
 
 const recentChecks = [];
@@ -52,6 +52,21 @@ const MONITORED_SERVICES = [
 
 app.use(cors());
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.json({
+    name: 'JAMA API',
+    status: 'ok',
+    message: 'API is running. Use /api/check-site to scan a website.',
+  });
+});
+
+app.get('/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+  });
+});
 
 function normalizeUrl(input) {
   const trimmed = String(input || '').trim();

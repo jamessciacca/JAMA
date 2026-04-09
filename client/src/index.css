@@ -23,7 +23,9 @@
 }
 
 html {
+  height: 100%;
   min-height: 100%;
+  background-color: var(--bg-base);
   background:
     radial-gradient(circle at top, rgba(20, 71, 126, 0.34), transparent 28%),
     linear-gradient(180deg, #08101d 0%, var(--bg-base) 38%, #04070f 100%);
@@ -32,7 +34,10 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  min-height: 100%;
   min-height: 100vh;
+  min-height: 100svh;
+  background-color: var(--bg-base);
   background:
     radial-gradient(circle at top, rgba(20, 71, 126, 0.34), transparent 28%),
     linear-gradient(180deg, #08101d 0%, var(--bg-base) 38%, #04070f 100%);
@@ -40,7 +45,9 @@ body {
 }
 
 #root {
+  min-height: 100%;
   min-height: 100vh;
+  min-height: 100svh;
   background: transparent;
 }
 
