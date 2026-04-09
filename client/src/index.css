@@ -1,0 +1,52 @@
+:root {
+  --bg-base: #050914;
+  --bg-panel: #0b1220;
+  --text-primary: #edf4ff;
+  --text-secondary: #9fb0c9;
+  --text-muted: #74839e;
+  --accent: #79dfff;
+  font-family: 'IBM Plex Sans', 'Avenir Next', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at top, rgba(20, 71, 126, 0.34), transparent 28%),
+    linear-gradient(180deg, #08101d 0%, var(--bg-base) 38%, #04070f 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(20, 71, 126, 0.34), transparent 28%),
+    linear-gradient(180deg, #08101d 0%, var(--bg-base) 38%, #04070f 100%);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(20, 71, 126, 0.34), transparent 28%),
+    linear-gradient(180deg, #08101d 0%, var(--bg-base) 38%, #04070f 100%);
+  overscroll-behavior-y: none;
+}
+
+#root {
+  min-height: 100vh;
+  background: transparent;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
